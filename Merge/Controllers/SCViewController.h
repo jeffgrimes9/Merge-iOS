@@ -1,5 +1,5 @@
 //
-//  QuadView.h
+//  SCViewController.h
 //  Merge
 //
 //  Created by Jeff Grimes on 1/19/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuadView : UIViewController
+@interface SCViewController : UIViewController
 
 - (void)activityPressed:(id)sender;
 - (IBAction)buttonDown:(id)sender;

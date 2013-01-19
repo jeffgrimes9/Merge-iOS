@@ -1,19 +1,19 @@
 //
-//  QuadView.m
+//  SCViewController.m
 //  Merge
 //
 //  Created by Jeff Grimes on 1/19/13.
 //  Copyright (c) 2013 Jeff Grimes. All rights reserved.
 //
 
-#import "QuadView.h"
+#import "SCViewController.h"
 #import "ActivityList.h"
 
-@interface QuadView ()
+@interface SCViewController ()
 
 @end
 
-@implementation QuadView
+@implementation SCViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
