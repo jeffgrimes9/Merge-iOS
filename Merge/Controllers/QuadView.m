@@ -60,6 +60,21 @@
     [self activityPressed:sender];
 }
 
+- (void)buttonOutside:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    NSString *imageName;
+    if (button.tag == 0) {
+        imageName = @"gympressed.png";
+    } else if (button.tag == 1) {
+        imageName = @"coffeepressed.png";
+    } else if (button.tag == 2) {
+        imageName = @"foodpressed.png";
+    } else {
+        imageName = @"studypressed.png";
+    }
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+}
+
 - (void)activityPressed:(id)sender {
     UIButton *button = (UIButton *)sender;
     NSString *activity;

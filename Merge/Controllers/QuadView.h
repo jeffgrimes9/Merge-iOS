@@ -13,5 +13,6 @@
 - (void)activityPressed:(id)sender;
 - (IBAction)buttonDown:(id)sender;
 - (IBAction)buttonUp:(id)sender;
+- (IBAction)buttonOutside:(id)sender;
 
 @end

@@ -8,7 +8,9 @@
 
 #import "ActivityList.h"
 
-@interface ActivityList ()
+@interface ActivityList () {
+    NSMutableArray *objects;
+}
 @property (nonatomic, retain) NSString *activityNameHolder;
 @end
 
@@ -26,10 +28,13 @@
     [self.activityNameLabel setText:self.activityNameHolder];
     [[self navigationController] setNavigationBarHidden:YES];
     
-    // left-swipe gesture git srecognizer
-    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeft:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeRight:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [self.tableView addGestureRecognizer:recognizer];
+}
+
+- (void)handleSwipeRight:(UISwipeGestureRecognizer *)gestureRecognizer {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Table view data source
@@ -39,32 +44,37 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 0;
+    return objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    // Configure the cell...
-    
+    NSDate *object = objects[indexPath.row];
+    cell.textLabel.text = [object description];
     return cell;
 }
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    // HANDLE LOGIC FOR MESSAGE/CALL
 }
+
+- (IBAction)insertNewMerge:(id)sender {
+    if (!objects) {
+        objects = [[NSMutableArray alloc] init];
+    }
+    [objects insertObject:[NSDate date] atIndex:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 @end

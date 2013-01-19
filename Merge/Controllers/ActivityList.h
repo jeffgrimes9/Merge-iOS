@@ -13,5 +13,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *activityNameLabel;
 
 - (id)initWithActivity:(NSString *)activityName;
+- (IBAction)insertNewMerge:(id)sender;
 
 @end
