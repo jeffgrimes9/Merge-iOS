@@ -36,10 +36,10 @@
 		0161920C16A9E0AB001D4295 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0161920E16A9E0AB001D4295 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0161921016A9E0AB001D4295 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		0161921216A9E0AB001D4295 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		0161921316A9E0AB001D4295 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		0161921516A9E0AB001D4295 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		0161921616A9E0AB001D4295 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0161921216A9E0AB001D4295 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = ../MasterViewController.h; sourceTree = "<group>"; };
+		0161921316A9E0AB001D4295 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = ../MasterViewController.m; sourceTree = "<group>"; };
+		0161921516A9E0AB001D4295 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ../DetailViewController.h; sourceTree = "<group>"; };
+		0161921616A9E0AB001D4295 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ../DetailViewController.m; sourceTree = "<group>"; };
 		0161921916A9E0AB001D4295 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		0161921C16A9E0AB001D4295 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,14 +88,12 @@
 		0161920016A9E0AB001D4295 /* Merge */ = {
 			isa = PBXGroup;
 			children = (
+				01B909F816AA6CAA00B428A8 /* Models */,
+				01B909FA16AA6CB000B428A8 /* Views */,
+				01B909FB16AA6CB400B428A8 /* Controllers */,
+				01B909FC16AA6CB900B428A8 /* Resources */,
 				0161920916A9E0AB001D4295 /* AppDelegate.h */,
 				0161920A16A9E0AB001D4295 /* AppDelegate.m */,
-				0161921216A9E0AB001D4295 /* MasterViewController.h */,
-				0161921316A9E0AB001D4295 /* MasterViewController.m */,
-				0161921516A9E0AB001D4295 /* DetailViewController.h */,
-				0161921616A9E0AB001D4295 /* DetailViewController.m */,
-				0161921816A9E0AB001D4295 /* MasterViewController.xib */,
-				0161921B16A9E0AB001D4295 /* DetailViewController.xib */,
 				0161920116A9E0AB001D4295 /* Supporting Files */,
 			);
 			path = Merge;
@@ -108,11 +106,45 @@
 				0161920316A9E0AB001D4295 /* InfoPlist.strings */,
 				0161920616A9E0AB001D4295 /* main.m */,
 				0161920816A9E0AB001D4295 /* Merge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01B909F816AA6CAA00B428A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01B909FA16AA6CB000B428A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0161921816A9E0AB001D4295 /* MasterViewController.xib */,
+				0161921B16A9E0AB001D4295 /* DetailViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01B909FB16AA6CB400B428A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0161921216A9E0AB001D4295 /* MasterViewController.h */,
+				0161921316A9E0AB001D4295 /* MasterViewController.m */,
+				0161921516A9E0AB001D4295 /* DetailViewController.h */,
+				0161921616A9E0AB001D4295 /* DetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01B909FC16AA6CB900B428A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				0161920C16A9E0AB001D4295 /* Default.png */,
 				0161920E16A9E0AB001D4295 /* Default@2x.png */,
 				0161921016A9E0AB001D4295 /* Default-568h@2x.png */,
 			);
-			name = "Supporting Files";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +238,7 @@
 				0161921916A9E0AB001D4295 /* en */,
 			);
 			name = MasterViewController.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0161921B16A9E0AB001D4295 /* DetailViewController.xib */ = {
@@ -214,6 +247,7 @@
 				0161921C16A9E0AB001D4295 /* en */,
 			);
 			name = DetailViewController.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -310,6 +344,7 @@
 				0161922216A9E0AB001D4295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
