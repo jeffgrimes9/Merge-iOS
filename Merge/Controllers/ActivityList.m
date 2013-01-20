@@ -7,6 +7,7 @@
 //
 
 #import "ActivityList.h"
+#import "NewMerge.h"
 
 @interface ActivityList () {
     NSMutableArray *objects;
@@ -71,9 +72,13 @@
     if (!objects) {
         objects = [[NSMutableArray alloc] init];
     }
-    [objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    NewMerge *newMergeController = [[NewMerge alloc] init];
+    [self.navigationController pushViewController:newMergeController animated:YES];
+    
+//    [objects insertObject:@"PUT OBJECT HERE" atIndex:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 

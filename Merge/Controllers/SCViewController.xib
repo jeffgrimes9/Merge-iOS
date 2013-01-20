@@ -54,7 +54,7 @@
 					<object class="IBUIButton" id="687951450">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{15, 107}, {135, 135}}</string>
+						<string key="NSFrame">{{15, 75}, {135, 135}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="745881662"/>
@@ -94,7 +94,7 @@
 					<object class="IBUIButton" id="745881662">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{167, 107}, {135, 135}}</string>
+						<string key="NSFrame">{{167, 75}, {135, 135}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="928124465"/>
@@ -122,7 +122,7 @@
 					<object class="IBUIButton" id="928124465">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{13, 258}, {135, 135}}</string>
+						<string key="NSFrame">{{13, 226}, {135, 135}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="245473102"/>
@@ -150,10 +150,10 @@
 					<object class="IBUIButton" id="245473102">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{167, 258}, {135, 135}}</string>
+						<string key="NSFrame">{{167, 226}, {135, 135}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="644596968"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">3</int>
@@ -189,6 +189,31 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">topbar1.png</string>
 						</object>
+					</object>
+					<object class="IBUIButton" id="644596968">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{74, 406}, {173, 34}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="131416614"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xMDczNTgxODYxIDAuMTA2MDMyNzc2NCAwLjEwNjAzMjc3NjQAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="199528087"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">LOGOUTpressed.png</string>
+						</object>
+						<reference key="IBUIFontDescription" ref="641914134"/>
+						<reference key="IBUIFont" ref="570131625"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -377,6 +402,15 @@
 					</object>
 					<int key="connectionID">187</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">logoutButtonWasPressed:</string>
+						<reference key="source" ref="644596968"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">190</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -396,6 +430,7 @@
 							<reference ref="245473102"/>
 							<reference ref="660289782"/>
 							<reference ref="654213268"/>
+							<reference ref="644596968"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -445,6 +480,11 @@
 						<reference key="object" ref="654213268"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">189</int>
+						<reference key="object" ref="644596968"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -455,6 +495,7 @@
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="152.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="188.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="189.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="77.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -464,7 +505,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">188</int>
+			<int key="maxID">190</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -475,6 +516,7 @@
 						<string key="buttonDown:">id</string>
 						<string key="buttonOutside:">id</string>
 						<string key="buttonUp:">id</string>
+						<string key="logoutButtonWasPressed:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="buttonDown:">
@@ -487,6 +529,10 @@
 						</object>
 						<object class="IBActionInfo" key="buttonUp:">
 							<string key="name">buttonUp:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="logoutButtonWasPressed:">
+							<string key="name">logoutButtonWasPressed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
@@ -502,6 +548,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="LOGOUTpressed.png">{750, 150}</string>
 			<string key="coffeepressed.png">{500, 500}</string>
 			<string key="foodpressed.png">{500, 500}</string>
 			<string key="gradbackground.png">{640, 960}</string>

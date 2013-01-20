@@ -10,6 +10,7 @@
 
 @interface SCViewController : UIViewController
 
+- (IBAction)logoutButtonWasPressed:(id)sender;
 - (void)activityPressed:(id)sender;
 - (IBAction)buttonDown:(id)sender;
 - (IBAction)buttonUp:(id)sender;

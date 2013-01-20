@@ -8,6 +8,7 @@
 
 #import "SCViewController.h"
 #import "ActivityList.h"
+#import "Facebook.h"
 
 @interface SCViewController ()
 
@@ -27,6 +28,10 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(IBAction)logoutButtonWasPressed:(id)sender {
+    [FBSession.activeSession closeAndClearTokenInformation];
 }
 
 - (IBAction)buttonDown:(id)sender {
@@ -79,13 +84,13 @@
     UIButton *button = (UIButton *)sender;
     NSString *activity;
     if (button.tag == 0) {
-        activity = @"gym";
+        activity = @"Gym";
     } else if (button.tag == 1) {
-        activity = @"coffee";
+        activity = @"Coffee";
     } else if (button.tag == 2) {
-        activity = @"food";
+        activity = @"Food";
     } else {
-        activity = @"study";
+        activity = @"Study";
     }
     ActivityList *activityList = [[ActivityList alloc] initWithActivity:activity];
     [self.navigationController pushViewController:activityList animated:YES];
