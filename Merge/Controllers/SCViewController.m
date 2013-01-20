@@ -8,7 +8,8 @@
 
 #import "SCViewController.h"
 #import "ActivityList.h"
-#import "Facebook.h"
+#import "UIViewController+MJPopupViewController.h"
+#import "LocalUser.h"
 
 @interface SCViewController ()
 
@@ -24,14 +25,34 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if (FBSession.activeSession.isOpen) {
+        [self populateUserDetails];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
-    // Do any additional setup after loading the view from its nib.
 }
 
--(IBAction)logoutButtonWasPressed:(id)sender {
+- (IBAction)logoutButtonWasPressed:(id)sender {
     [FBSession.activeSession closeAndClearTokenInformation];
+}
+
+- (void)populateUserDetails {
+    if (FBSession.activeSession.isOpen) {
+        [[FBRequest requestForMe] startWithCompletionHandler:
+         ^(FBRequestConnection *connection,
+           NSDictionary<FBGraphUser> *user,
+           NSError *error) {
+             if (!error) {
+                 NSLog(@"taster666666: %@", user.id);
+             }
+         }];
+    }
 }
 
 - (IBAction)buttonDown:(id)sender {

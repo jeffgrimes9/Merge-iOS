@@ -15,6 +15,8 @@
 @property (nonatomic, retain) IBOutlet UIButton *button2;
 @property (nonatomic, retain) IBOutlet UIButton *button3;
 
+- (id)initWithDefaultCheck:(NSInteger)activityIndex;
+
 - (IBAction)buttonPressed:(id)sender;
 
 - (IBAction)FROMhoursPressedUP;

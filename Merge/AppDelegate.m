@@ -43,9 +43,6 @@
     return YES;
 }
 
-
-
-
 - (void)showLoginView {
     UIViewController *topViewController = [self.navController topViewController];
     UIViewController *modalViewController = [topViewController modalViewController];

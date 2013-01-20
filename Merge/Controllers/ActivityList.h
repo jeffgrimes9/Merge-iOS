@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MergeAPI.h"
+#import "Event.h"
 
-@interface ActivityList : UITableViewController
+@interface ActivityList : UITableViewController <UIAlertViewDelegate>
 
+@property (nonatomic, retain) MergeAPI *mergeAPI;
 @property (nonatomic, retain) IBOutlet UILabel *activityNameLabel;
 
 - (id)initWithActivity:(NSString *)activityName;
-- (IBAction)insertNewMerge:(id)sender;
+- (IBAction)newMergeButtonPressed:(id)sender;
 
 @end

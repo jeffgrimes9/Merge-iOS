@@ -35,6 +35,7 @@
 		014B0A8C16ABA1D700B55713 /* LOGOUTpressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 014B0A8416ABA1D700B55713 /* LOGOUTpressed.png */; };
 		014B0A8D16ABB27300B55713 /* mergeicon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0169052616AB37B000D7EDE5 /* mergeicon57.png */; };
 		014B0A8E16ABB27A00B55713 /* mergeicon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0169052016AB379C00D7EDE5 /* mergeicon114.png */; };
+		014B0A9916ABC7EB00B55713 /* MergeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 014B0A9816ABC7EB00B55713 /* MergeAPI.m */; };
 		016191FB16A9E0AB001D4295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016191FA16A9E0AB001D4295 /* UIKit.framework */; };
 		016191FD16A9E0AB001D4295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016191FC16A9E0AB001D4295 /* Foundation.framework */; };
 		016191FF16A9E0AB001D4295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016191FE16A9E0AB001D4295 /* CoreGraphics.framework */; };
@@ -75,6 +76,12 @@
 		01B90AC916AB32B500B428A8 /* splash4s.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B90AC616AB32B500B428A8 /* splash4s.png */; };
 		01B90ACA16AB32B500B428A8 /* splash5.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B90AC716AB32B500B428A8 /* splash5.png */; };
 		01B90ACC16AB32CF00B428A8 /* mergeplusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B90ACB16AB32CF00B428A8 /* mergeplusbutton.png */; };
+		01EAB56216ABCB3600F42AC5 /* DataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EAB56116ABCB3600F42AC5 /* DataStorage.m */; };
+		01EAB56616ABCC5300F42AC5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EAB56516ABCC5300F42AC5 /* Event.m */; };
+		01EAB56916ABCCF000F42AC5 /* LocalUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EAB56816ABCCF000F42AC5 /* LocalUser.m */; };
+		01EAB57916ABD24C00F42AC5 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EAB57616ABD24C00F42AC5 /* call.png */; };
+		01EAB57A16ABD24C00F42AC5 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EAB57716ABD24C00F42AC5 /* message.png */; };
+		01EAB57B16ABD24C00F42AC5 /* popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EAB57816ABD24C00F42AC5 /* popup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +108,8 @@
 		014B0A8216ABA1D700B55713 /* login5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login5.png; sourceTree = "<group>"; };
 		014B0A8316ABA1D700B55713 /* LOGOUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGOUT.png; sourceTree = "<group>"; };
 		014B0A8416ABA1D700B55713 /* LOGOUTpressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGOUTpressed.png; sourceTree = "<group>"; };
+		014B0A9716ABC7EB00B55713 /* MergeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeAPI.h; sourceTree = "<group>"; };
+		014B0A9816ABC7EB00B55713 /* MergeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeAPI.m; sourceTree = "<group>"; };
 		016191F616A9E0AB001D4295 /* Merge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Merge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016191FA16A9E0AB001D4295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		016191FC16A9E0AB001D4295 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -185,6 +194,19 @@
 		01B90AC616AB32B500B428A8 /* splash4s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash4s.png; sourceTree = "<group>"; };
 		01B90AC716AB32B500B428A8 /* splash5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash5.png; sourceTree = "<group>"; };
 		01B90ACB16AB32CF00B428A8 /* mergeplusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mergeplusbutton.png; sourceTree = "<group>"; };
+		01EAB56016ABCB3600F42AC5 /* DataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
+		01EAB56116ABCB3600F42AC5 /* DataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStorage.m; sourceTree = "<group>"; };
+		01EAB56416ABCC5300F42AC5 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		01EAB56516ABCC5300F42AC5 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		01EAB56716ABCCF000F42AC5 /* LocalUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalUser.h; path = ../LocalUser.h; sourceTree = "<group>"; };
+		01EAB56816ABCCF000F42AC5 /* LocalUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalUser.m; path = ../LocalUser.m; sourceTree = "<group>"; };
+		01EAB57216ABD1E600F42AC5 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		01EAB57316ABD1E600F42AC5 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		01EAB57416ABD1E600F42AC5 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		01EAB57516ABD1E600F42AC5 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		01EAB57616ABD24C00F42AC5 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
+		01EAB57716ABD24C00F42AC5 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		01EAB57816ABD24C00F42AC5 /* popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +279,8 @@
 			children = (
 				0161920916A9E0AB001D4295 /* AppDelegate.h */,
 				0161920A16A9E0AB001D4295 /* AppDelegate.m */,
+				014B0A9716ABC7EB00B55713 /* MergeAPI.h */,
+				014B0A9816ABC7EB00B55713 /* MergeAPI.m */,
 				01B909F816AA6CAA00B428A8 /* Models */,
 				01B909FA16AA6CB000B428A8 /* Views */,
 				01B909FB16AA6CB400B428A8 /* Controllers */,
@@ -269,6 +293,10 @@
 		0161920116A9E0AB001D4295 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				01EAB57216ABD1E600F42AC5 /* MJPopupBackgroundView.h */,
+				01EAB57316ABD1E600F42AC5 /* MJPopupBackgroundView.m */,
+				01EAB57416ABD1E600F42AC5 /* UIViewController+MJPopupViewController.h */,
+				01EAB57516ABD1E600F42AC5 /* UIViewController+MJPopupViewController.m */,
 				0161920216A9E0AB001D4295 /* Merge-Info.plist */,
 				0161920316A9E0AB001D4295 /* InfoPlist.strings */,
 				0161920616A9E0AB001D4295 /* main.m */,
@@ -319,6 +347,12 @@
 		01B909F816AA6CAA00B428A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01EAB56016ABCB3600F42AC5 /* DataStorage.h */,
+				01EAB56116ABCB3600F42AC5 /* DataStorage.m */,
+				01EAB56416ABCC5300F42AC5 /* Event.h */,
+				01EAB56516ABCC5300F42AC5 /* Event.m */,
+				01EAB56716ABCCF000F42AC5 /* LocalUser.h */,
+				01EAB56816ABCCF000F42AC5 /* LocalUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,6 +386,9 @@
 		01B909FC16AA6CB900B428A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01EAB57616ABD24C00F42AC5 /* call.png */,
+				01EAB57716ABD24C00F42AC5 /* message.png */,
+				01EAB57816ABD24C00F42AC5 /* popup.png */,
 				014B0A7D16ABA1D700B55713 /* carrotDOWN.png */,
 				014B0A7E16ABA1D700B55713 /* carrotUP.png */,
 				014B0A7F16ABA1D700B55713 /* fblogin.png */,
@@ -497,6 +534,9 @@
 				014B0A8C16ABA1D700B55713 /* LOGOUTpressed.png in Resources */,
 				014B0A8D16ABB27300B55713 /* mergeicon57.png in Resources */,
 				014B0A8E16ABB27A00B55713 /* mergeicon114.png in Resources */,
+				01EAB57916ABD24C00F42AC5 /* call.png in Resources */,
+				01EAB57A16ABD24C00F42AC5 /* message.png in Resources */,
+				01EAB57B16ABD24C00F42AC5 /* popup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +553,10 @@
 				01B90A2116AA874200B428A8 /* SCViewController.m in Sources */,
 				0169052D16AB3BA200D7EDE5 /* NewMerge.m in Sources */,
 				0169053216AB407B00D7EDE5 /* SCLoginViewController.m in Sources */,
+				014B0A9916ABC7EB00B55713 /* MergeAPI.m in Sources */,
+				01EAB56216ABCB3600F42AC5 /* DataStorage.m in Sources */,
+				01EAB56616ABCC5300F42AC5 /* Event.m in Sources */,
+				01EAB56916ABCCF000F42AC5 /* LocalUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

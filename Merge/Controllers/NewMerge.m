@@ -28,6 +28,13 @@
 
 @implementation NewMerge
 
+- (id)initWithDefaultCheck:(NSInteger)activityIndex {
+    if (self = [super init]) {
+        self.activityIndex = activityIndex;
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -51,20 +58,7 @@
     [dateFormatter setDateFormat:@"mm"];
     int minute = [[dateFormatter stringFromDate:[NSDate date]] intValue];
     
-    if (hour < 12) {
-        self.fromMERIDIAN = 0;
-    } else {
-        self.fromMERIDIAN = 1;
-    }
-    
-    self.toMERIDIAN = self.fromMERIDIAN;
-    
-    [dateFormatter setDateFormat:@"hh"];
-    hour = [[dateFormatter stringFromDate:[NSDate date]] intValue];
-    if (hour == 0) {
-        hour = 1;
-    }
-    
+    // round minutes to nearest 15, possibly bumping hour up -MNS
     if (minute < 15) {
         self.fromMINS = 15;
     } else if (minute < 30) {
@@ -75,19 +69,46 @@
         self.fromMINS = 0;
         hour++;
     }
+    self.toMINS = self.fromMINS;
     
-    self.fromHOURS = hour;
-    self.toHOURS = hour + 1;
-    if (self.toHOURS > 12) {
-        self.toHOURS -= 12;
-        if (self.toMERIDIAN == 1) {
-            self.toMERIDIAN = 0;
-        } else {
-            self.toMERIDIAN = 1;
-        }
+    // initial meridian adjustments -MNS
+    if (hour < 12) {
+        self.fromMERIDIAN = 0;
+    } else {
+        self.fromMERIDIAN = 1;
     }
     
-    self.toMINS = self.fromMINS;
+    // edge meridian cases for when the hour is on the border -MNS
+    if (hour == 11) {
+        self.toMERIDIAN = 1;
+        self.fromMERIDIAN = 0;
+    } else if (hour == 23) {
+        self.fromMERIDIAN = 0;
+        self.toMERIDIAN = 1;
+    } else {
+        self.toMERIDIAN = self.fromMERIDIAN;
+    }
+    
+    // hour adjustments -MNS
+    // we use the (+12) on the hours to simplify the edge case of military 00:xx -MNS
+    self.fromHOURS = hour + 12;
+    self.toHOURS = hour + 1 + 12; // "to" slot should be an hour more
+    if (self.fromHOURS > 12) {
+        self.fromHOURS -= 12;
+    }
+    while (self.toHOURS > 12) {
+        self.toHOURS -= 12;
+    }
+    
+    if (self.activityIndex == 0) {
+        [self buttonPressed: self.button0];
+    } else if (self.activityIndex == 1) {
+        [self buttonPressed: self.button1];
+    } else if (self.activityIndex == 2) {
+        [self buttonPressed: self.button2];
+    } else if (self.activityIndex == 3) {
+        [self buttonPressed: self.button3];
+    }
     
     [self updateTimeLabels];
     
@@ -131,7 +152,7 @@
 }
 
 - (IBAction)createPressed {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Time button methods

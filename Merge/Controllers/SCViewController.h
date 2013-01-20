@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Facebook.h"
 
-@interface SCViewController : UIViewController
+@interface SCViewController : UIViewController <FBLoginViewDelegate>
 
 - (IBAction)logoutButtonWasPressed:(id)sender;
 - (void)activityPressed:(id)sender;
