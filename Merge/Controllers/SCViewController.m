@@ -33,6 +33,10 @@
     }
 }
 
+- (void)test {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
