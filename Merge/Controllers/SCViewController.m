@@ -79,13 +79,13 @@
     UIButton *button = (UIButton *)sender;
     NSString *activity;
     if (button.tag == 0) {
-        activity = @"Gym";
+        activity = @"gym";
     } else if (button.tag == 1) {
-        activity = @"Coffee";
+        activity = @"coffee";
     } else if (button.tag == 2) {
-        activity = @"Food";
+        activity = @"food";
     } else {
-        activity = @"Study";
+        activity = @"study";
     }
     ActivityList *activityList = [[ActivityList alloc] initWithActivity:activity];
     [self.navigationController pushViewController:activityList animated:YES];

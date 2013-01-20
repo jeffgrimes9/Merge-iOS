@@ -27,12 +27,14 @@
                                initWithNibName:@"SCViewController" bundle:nil];
     self.navController = [[UINavigationController alloc]
                           initWithRootViewController:self.mainViewController];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     
     // See if we have a valid token for the current state.
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
-        // To-do, show logged in view
+        // Yes, so just open the session (this won't display any UX).
+        [self openSession];
     } else {
         // No, display the login page.
         [self showLoginView];
@@ -40,6 +42,9 @@
 
     return YES;
 }
+
+
+
 
 - (void)showLoginView {
     UIViewController *topViewController = [self.navController topViewController];
